@@ -9,6 +9,7 @@ Setar para usar o metamask e fazer o upload do contrato
 Criar conta e configurar o infura (https://infura.io/)
 
 
+
 Utilizando Web3j para trabalhar com smart contracts no Java
 
 https://docs.web3j.io/getting_started.html
@@ -21,6 +22,9 @@ copiar o código binário do web3deploy para o arquivo .bin e a abi para o arqui
 Importar a classe Java que foi criada no seu projeto, adicionalmente verificar se ela está correta
 Para iniciar a conexão no seu programa, usar o Conexao.java
 Para fazer o delploy de um contrato via web3j usar o Interação.java
+
+
+
 
 Outras informações
 Pode ser usadas Blockchains publicas especiais para teste e desenvolvimento (testnet, robstein...) onde não é preciso fazer a mineração.
