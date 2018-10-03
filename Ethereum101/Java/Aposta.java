@@ -13,8 +13,7 @@ public class Aposta {
 
 	public static void main(String[] args) {
 		
-		//Conectar no Infura
-		Web3j web3 = Web3j.build(new HttpService("https://ropsten.infura.io/v3/24492f0df2674e6ca03c157c474027ee"));
+		//TODO: Conectar no Infura
 		try
 		{
 			System.out.println(web3.web3ClientVersion().send().getWeb3ClientVersion());
@@ -36,7 +35,7 @@ public class Aposta {
 		}	
 		while(!WalletUtils.isValidPrivateKey(pk));
 		//in.close();
-		credentials = Credentials.create(pk);
+		//TODO: Criar credentials
 		
 		imprimirSaldo(credentials, web3);
 		
@@ -63,7 +62,7 @@ public class Aposta {
 	private static void criarContrato(Credentials c, Web3j w)
 	{
 		try {
-			Jogo contrato = Jogo.deploy(w, c, new BigInteger("5000"), new BigInteger("3000000")).send();
+			//TODO: Fazer o deploy de um contrato
 			System.out.println("\n" + "Endereço do novo contrato: " + contrato.getContractAddress());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -77,7 +76,7 @@ public class Aposta {
 		do {
 			System.out.print("\n" + "Digite o endereço do contrato: ");
 			if(in.hasNext()) add = in.next();
-			j = Jogo.load(add, w, c, new BigInteger("5000"), new BigInteger("3000000"));
+			//TODO: Carregar contrato de um endereço
 			
 			try {
 				valido = j.isValid();
@@ -91,7 +90,7 @@ public class Aposta {
 		System.out.print("\n" + "Digite o valor: ");
 		if(in.hasNextInt()) valor = in.nextInt();
 		try {
-			j.apostar(new BigInteger(Integer.toString(valor))).send();
+			//TODO: fazer uma aposta no contrato do jogo
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
